@@ -1,0 +1,14 @@
+postgres-slave:
+  image: "nebirhos/postgres-replication"
+  ports:
+    - 5433:5432
+  links:
+    - postgres-master
+  environment:
+    REPLICATION_ROLE: slave
+    POSTGRES_MASTER_SERVICE_HOST: postgres-master
+
+postgres-master:
+  image: "nebirhos/postgres-replication"
+  ports:
+    - 5432:5432
