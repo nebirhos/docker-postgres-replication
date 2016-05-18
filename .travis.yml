@@ -1,0 +1,16 @@
+language: bash
+services: docker
+
+env:
+  - VERSION=latest
+
+before_script:
+  - env | sort
+  - image="nebirhos/postgres-replication:$VERSION"
+
+script:
+  - docker build -t "$image" .
+  - ./tests/run.sh "$image"
+
+after_script:
+  - docker images
