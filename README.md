@@ -1,6 +1,9 @@
 Postgres Streaming Replication
 ==============================
 
+[![](https://imagelayers.io/badge/nebirhos/postgres-replication:latest.svg)](https://imagelayers.io/?images=nebirhos/postgres-replication:latest 'Get your own badge on imagelayers.io')
+
+
 Enhanced version of the official Postgres image to support streaming replication
 out of the box.
 
