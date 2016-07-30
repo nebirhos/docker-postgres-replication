@@ -11,6 +11,18 @@ out of the box.
 Postgres-replication is meant to be used with orchestration systems such as Kubernetes.
 
 
+Tags
+----
+
+Images are automatically updated when the [official postgres image](https://hub.docker.com/_/postgres/)
+is updated.
+
+Supported tags:
+
+* 9.6 ([9.6](https://github.com/nebirhos/docker-postgres-replication/tree/9.6))
+* 9.5, 9, latest ([9.5](https://github.com/nebirhos/docker-postgres-replication/tree/9.5))
+
+
 Run with Docker Compose
 -----------------------
 
