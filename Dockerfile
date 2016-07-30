@@ -1,5 +1,5 @@
 # -*- mode: conf -*-
-FROM postgres:9.6
+FROM postgres:9.5
 
 MAINTAINER me@nebirhos.com
 
