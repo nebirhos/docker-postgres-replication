@@ -2,7 +2,7 @@ language: bash
 services: docker
 
 env:
-  - VERSION=latest
+  - VERSION=9.6
 
 before_script:
   - env | sort

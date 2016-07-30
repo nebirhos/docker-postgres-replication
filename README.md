@@ -1,8 +1,8 @@
 Postgres Streaming Replication
 ==============================
 
-[![Build Status](https://travis-ci.org/nebirhos/docker-postgres-replication.svg?branch=master)](https://travis-ci.org/nebirhos/docker-postgres-replication)
-[![](https://imagelayers.io/badge/nebirhos/postgres-replication:latest.svg)](https://imagelayers.io/?images=nebirhos/postgres-replication:latest 'Get your own badge on imagelayers.io')
+[![Build Status](https://travis-ci.org/nebirhos/docker-postgres-replication.svg?branch=9.6)](https://travis-ci.org/nebirhos/docker-postgres-replication)
+[![](https://imagelayers.io/badge/nebirhos/postgres-replication:9.6.svg)](https://imagelayers.io/?images=nebirhos/postgres-replication:9.6 'Get your own badge on imagelayers.io')
 
 
 Enhanced version of the official Postgres image to support streaming replication
