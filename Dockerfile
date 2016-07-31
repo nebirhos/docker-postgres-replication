@@ -3,10 +3,12 @@ FROM postgres:9.5
 
 MAINTAINER me@nebirhos.com
 
-# postgresql.conf tweaks
-ENV MAX_CONNECTIONS 500
-
 # common settings
+ENV MAX_CONNECTIONS 500
+ENV WAL_KEEP_SEGMENTS 256
+ENV MAX_WAL_SENDERS 100
+
+# master/slave settings
 ENV REPLICATION_ROLE master
 ENV REPLICATION_USER replication
 ENV REPLICATION_PASSWORD ""
