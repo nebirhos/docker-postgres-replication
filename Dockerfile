@@ -19,5 +19,7 @@ ENV POSTGRES_MASTER_SERVICE_PORT 5432
 
 COPY 10-config.sh /docker-entrypoint-initdb.d/
 COPY 20-replication.sh /docker-entrypoint-initdb.d/
-# Evaluate vars inside PGDATA (eg PGDATA=/mnt/$HOSTNAME)
+# Evaluate vars inside PGDATA at runtime.
+# For example HOSTNAME in 'ENV PGDATA=/mnt/$HOSTNAME'
+# is resolved runtime rather then during build
 RUN sed -i 's/set -e/set -e -x\nPGDATA=$(eval echo "$PGDATA")/' /docker-entrypoint.sh
