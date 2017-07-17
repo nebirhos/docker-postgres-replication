@@ -19,8 +19,8 @@ is updated.
 
 Supported tags:
 
-* 9.6 ([9.6](https://github.com/nebirhos/docker-postgres-replication/tree/9.6))
-* 9.5, 9, latest ([9.5](https://github.com/nebirhos/docker-postgres-replication/tree/9.5))
+* 9.6, 9, latest ([9.6](https://github.com/nebirhos/docker-postgres-replication/tree/9.6))
+* 9.5 ([9.5](https://github.com/nebirhos/docker-postgres-replication/tree/9.5))
 
 
 Run with Docker Compose
