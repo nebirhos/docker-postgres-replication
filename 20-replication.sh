@@ -7,11 +7,11 @@ if [ $REPLICATION_ROLE = "master" ]; then
 elif [ $REPLICATION_ROLE = "slave" ]; then
     # stop postgres instance and reset PGDATA,
     # confs will be copied by pg_basebackup
-    gosu postgres pg_ctl -D "$PGDATA" -m fast -w stop
+    pg_ctl -D "$PGDATA" -m fast -w stop
     # make sure standby's data directory is empty
     rm -r "$PGDATA"/*
 
-    gosu postgres pg_basebackup \
+    pg_basebackup \
          --write-recovery-conf \
          --pgdata="$PGDATA" \
          --xlog-method=fetch \
@@ -22,7 +22,7 @@ elif [ $REPLICATION_ROLE = "slave" ]; then
          --verbose
 
     # useless postgres start to fullfil docker-entrypoint.sh stop
-    gosu postgres pg_ctl -D "$PGDATA" \
+    pg_ctl -D "$PGDATA" \
          -o "-c listen_addresses=''" \
          -w start
 fi
