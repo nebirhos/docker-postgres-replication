@@ -1,5 +1,5 @@
 # -*- mode: conf -*-
-FROM postgres:9.6
+FROM postgres:12.3
 
 MAINTAINER me@nebirhos.com
 
@@ -16,6 +16,9 @@ ENV REPLICATION_PASSWORD ""
 # slave settings
 ENV POSTGRES_MASTER_SERVICE_HOST localhost
 ENV POSTGRES_MASTER_SERVICE_PORT 5432
+
+# postgres settings
+ENV POSTGRES_USER postgres
 
 COPY 10-config.sh /docker-entrypoint-initdb.d/
 COPY 20-replication.sh /docker-entrypoint-initdb.d/
